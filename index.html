@@ -14,19 +14,44 @@
   </script>
 
   <!-- 🔍 SEO Title -->
-  <title>Fantasy Name Generator – Create Names for Characters, Cities & Artifacts</title>
+  <title>Fantasy Name Engine – Create Names for Characters, Cities & Artifacts</title>
 
   <!-- 🔍 Google Description -->
   <meta name="description" content="Generate unique fantasy names for characters, cities, factions, artifacts and creatures. Perfect for writers, RPG players and worldbuilders.">
 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Fantasy Name Engine – Create Names for Characters, Cities & Artifacts">
+  <meta property="og:description" content="Generate unique fantasy names for characters, cities, factions, artifacts and creatures. Perfect for writers, RPG players and worldbuilders.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bry-design.github.io/Fantasy-names-engine/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fantasy Name Engine – Create Names for Characters, Cities & Artifacts">
+  <meta name="twitter:description" content="Generate unique fantasy names for characters, cities, factions, artifacts and creatures. Perfect for writers, RPG players and worldbuilders.">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- JSON-LD Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Fantasy Name Engine",
+    "url": "https://bry-design.github.io/Fantasy-names-engine/",
+    "applicationCategory": "Game",
+    "description": "Generate unique fantasy names for characters, cities, factions, artifacts and creatures. Perfect for writers, RPG players and worldbuilders.",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires modern browser"
+  }
+  </script>
 </head>
 
 <body>
   <div class="container">
-
     <header>
-      <h1>Mythic Fantasy Name Engine</h1>
+      <h1>Fantasy Name Engine</h1>
       <p class="subtitle">Forge names from ancient worlds</p>
     </header>
 
@@ -59,9 +84,9 @@
     </div>
 
     <!-- ✨ Results -->
-    <div id="results" class="results"></div>
+    <main id="results" class="results"></main>
 
-    <!-- 🌍 SEO Content (Helps Google understand your site) -->
+    <!-- 🌍 SEO Content (hidden visually but readable by search engines) -->
     <section class="seo-content">
       <h2>Fantasy Name Generator for Writers & RPG Players</h2>
       <p>
@@ -86,9 +111,9 @@
         <li>Worldbuilding hobbyists and storytellers</li>
       </ul>
     </section>
-
   </div>
 
+  <!-- Scripts -->
   <script src="js/utils.js"></script>
   <script src="js/generator.js"></script>
   <script src="js/app.js"></script>
