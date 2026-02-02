@@ -1,0 +1,189 @@
+:root {
+  --bg-start: #0d001a;
+  --bg-end:   #1a0033;
+  --card-bg:  #140d24;
+  --accent:   #d4af37;
+  --accent-dark: #a88c2a;
+  --text:     #f0e8ff;
+  --text-dim: #b0a0d0;
+  --border:   #3a2558;
+  --glow:     0 0 12px rgba(212, 175, 55, 0.28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1 {
+  font-size: 2.9rem;
+  color: var(--accent);
+  text-shadow: var(--glow);
+  margin-bottom: 0.35rem;
+}
+
+.subtitle {
+  font-size: 1.18rem;
+  color: var(--text-dim);
+  font-style: italic;
+  opacity: 0.92;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  justify-content: center;
+  margin-bottom: 2.8rem;
+}
+
+.form-group {
+  min-width: 240px;
+  flex: 1 1 220px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-dim);
+  font-size: 0.96rem;
+}
+
+select, button {
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  font-size: 1.05rem;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: system-ui, sans-serif;
+}
+
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%23d4af37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.1rem center;
+  background-size: 14px;
+  padding-right: 2.6rem;
+}
+
+select:focus, button:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+button {
+  background: linear-gradient(145deg, #e9c56a, #c89f30);
+  color: #0a0015;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  min-width: 240px;
+  margin-top: 1.6rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.55);
+  transition: all 0.18s ease;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #f0d080, #d4b040);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(212,175,55,0.35);
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.4rem;
+}
+
+.result-card {
+  background: linear-gradient(to bottom right, #1a1429, #120b22);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.4rem 1.6rem;
+  position: relative;
+  transition: all 0.2s ease;
+
+  display: flex;
+  flex-direction: column; /* stack label, name, button vertically */
+}
+
+.result-card:hover {
+  border-color: #b8972e;
+  box-shadow: 0 8px 24px rgba(212,175,55,0.18);
+  transform: translateY(-4px);
+}
+
+.result-card h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-dim);
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.name {
+  font-size: 1.45rem;
+  line-height: 1.32;
+  color: #f8f0ff;
+  word-break: break-word;
+  margin-bottom: 0.9rem; /* space for copy button */
+}
+
+.copy-btn {
+  align-self: flex-start; /* stay under name */
+  background: rgba(212,175,55,0.18);
+  border: 1px solid #b8972e;
+  color: var(--accent);
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.copy-btn:hover {
+  background: rgba(212,175,55,0.38);
+}
+
+/* Hide SEO content visually but keep it readable by search engines */
+.seo-content {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 620px) {
+  .controls { flex-direction: column; align-items: stretch; }
+  .result-card { align-items: flex-start; }
+  .copy-btn { margin-top: 0.3rem; }
+}

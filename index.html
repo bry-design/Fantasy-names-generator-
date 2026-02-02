@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🔍 SEO Title -->
+  <title>Fantasy Name Generator – Create Names for Characters, Cities & Artifacts</title>
+
+  <!-- 🔍 Google Description -->
+  <meta name="description" content="Generate unique fantasy names for characters, cities, factions, artifacts and creatures. Perfect for writers, RPG players and worldbuilders.">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Mythic Fantasy Name Engine</h1>
+      <p class="subtitle">Forge names from ancient worlds</p>
+    </header>
+
+    <!-- 🎛 Controls -->
+    <div class="controls">
+      <div class="form-group">
+        <label for="culture-select">Culture Theme</label>
+        <select id="culture-select">
+          <option value="elven">Elven</option>
+          <option value="dwarven">Dwarven</option>
+          <option value="orcish">Orcish</option>
+          <option value="draconic">Draconic</option>
+          <option value="celestial">Celestial</option>
+          <option value="shadowborn">Shadowborn</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="category-select">Name Category</label>
+        <select id="category-select">
+          <option value="characters">Characters</option>
+          <option value="places">Cities & Places</option>
+          <option value="factions">Factions & Orders</option>
+          <option value="artifacts">Artifacts & Relics</option>
+          <option value="creatures">Creatures & Species</option>
+        </select>
+      </div>
+
+      <button id="generate">Generate Names</button>
+    </div>
+
+    <!-- ✨ Results -->
+    <div id="results" class="results"></div>
+
+    <!-- 🌍 SEO Content (Helps Google understand your site) -->
+    <section class="seo-content">
+      <h2>Fantasy Name Generator for Writers & RPG Players</h2>
+      <p>
+        This fantasy name generator creates unique names for characters, cities, magical artifacts,
+        factions, and mythical creatures. Whether you're building a Dungeons & Dragons world,
+        writing a fantasy novel, or designing a game universe, these procedurally generated names
+        help bring your world to life.
+      </p>
+
+      <h3>How This Fantasy Name Generator Works</h3>
+      <p>
+        Names are built using cultural sound patterns inspired by elven, dwarven, orcish, draconic,
+        celestial, and shadow realms. Each result is created through structured syllable combinations
+        and fantasy-style mutations to feel immersive, ancient, and believable.
+      </p>
+
+      <h3>Who Is This Tool For?</h3>
+      <ul>
+        <li>Fantasy writers creating worlds and characters</li>
+        <li>Dungeons & Dragons and tabletop RPG players</li>
+        <li>Game developers designing fantasy settings</li>
+        <li>Worldbuilding hobbyists and storytellers</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/generator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
